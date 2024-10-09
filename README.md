@@ -23,3 +23,7 @@ Proyek ini merupakan aplikasi web yang dibangun menggunakan React JS di bagian f
 
 - ### Form Add Cake
 <img src="./src/image/FormAddCake.png">
+
+# NOTE
+
+## JIKA SETELAH MENGADD REVIEW MUNCUL ERROR, KLIK BACK, LALU BUKA REVIEW LAGI.
