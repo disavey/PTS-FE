@@ -30,7 +30,7 @@ function Login() {
             <div className="flex flex-col justify-center p-2 gap-y-2 mx-auto">
               <div className="flex flex-col gap-y-1">
                 <label htmlFor="" className="font-semibold">
-                  Username
+                  Ayam
                 </label>
                 <input
                   className="border-2 border-black  rounded-md"
