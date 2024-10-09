@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import './home.css'
 function Home() {
     const navigate= useNavigate()
     function clickCake(){
@@ -11,10 +11,9 @@ function Home() {
     }
   return (
     <div
-      className=" w-full min-h-screen flex items-center justify-center bg-cover bg-center"
-      style={{
-        backgroundImage: "url('/public/background.jpg')",
-      }}
+      className=" w-full min-h-screen flex items-center justify-center bg-cover bg-center 
+      bekgron "
+      
     >
       <div className="">
         <h1 className="text-4xl font-bold font-serif text-white ">
