@@ -1,8 +1,12 @@
-# React + Vite
+# Proyek Front-End dengan React dan Express
+- Deskripsi Proyek
+Proyek ini merupakan aplikasi web yang dibangun menggunakan React JS di bagian front-end dan Express JS di bagian back-end. Aplikasi ini menggunakan React Router DOM untuk mengatur navigasi antar halaman dan Axios untuk melakukan pengambilan (fetching) data dari API. Untuk styling, proyek ini memanfaatkan Tailwind CSS. Bagian back-end berjalan dengan menggunakan Nodemon untuk secara otomatis memantau perubahan pada kode.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Fitur Utama
+- React JS sebagai library front-end untuk membangun user interface yang dinamis.
+- Express JS untuk membuat API back-end yang melayani permintaan dari aplikasi front-end.
+- React Router DOM untuk navigasi antar halaman tanpa perlu reload halaman.
+- Axios untuk melakukan HTTP request seperti GET, POST, PUT, DELETE untuk mengambil dan mengirim data ke server.
+- Tailwind CSS untuk membuat tampilan yang modern dan responsif dengan utility-first CSS.
+- Nodemon untuk secara otomatis memonitor perubahan pada server dan menjalankan ulang server Express.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

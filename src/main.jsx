@@ -12,7 +12,7 @@ import EditCake from "./components/Cake/CakeEdit.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/PTS-FE",
     element: <Login />,
   },
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     element: <Home/>
   },
   {
-    path: "/cake",
+    path: "/cake",   
     element: <Cake/>
   },
   {
