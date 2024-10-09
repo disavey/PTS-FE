@@ -1,9 +1,42 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import ChefModal from "../modal/ChefModal.jsx";
+import { addChef } from "../../api/ChefApi.js";
 
 const Chef = () => {
   const [chefs, setChefs] = useState([]);
+  const [openForm, setOpenForm] = useState(false);
+  const [post, setPost] = useState({
+    name: "",
+    instagram: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setPost((prevPost) => ({
+      ...prevPost,
+      [name]: value,
+    }));
+  };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    addChef(post)
+      .then((response) => {
+        console.log("Chef berhasil ditambahkan:", response);
+        setChefs((prevChef) => [...prevChef, response]);
+        console.log("State chef setelah submit:", chefs);
+        setOpenForm(false); 
+      })
+      .catch((error) => {
+        console.error("Error adding chef:", error);
+      });
+  }
+
+  function handleOpenForm() {
+    setOpenForm(!openForm);
+  }
 
   useEffect(() => {
     getChefs();
@@ -28,12 +61,20 @@ const Chef = () => {
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-semibold text-gray-700">Chef List</h1>
-          <Link
-            to={`add`}
+          <button
             className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300"
+            onClick={handleOpenForm}
           >
             Add New Chef
-          </Link>
+          </button>
+          {openForm && (
+            <ChefModal
+              onClose={() => setOpenForm(false)}
+              post={post}
+              onChange={handleChange}
+              handleSubmit={handleSubmit}
+            />
+          )}
         </div>
 
         <div className="overflow-x-auto">

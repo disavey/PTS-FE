@@ -4,9 +4,9 @@ import Modal from "../modal/Modal.jsx";
 import { addCake, deleteCake, getAllCakes } from "../../api/CakeApi.js";
 
 const Cake = () => {
-      const [modalOpen, setModalOpen] = useState(false);
-    const openModals = () => setModalOpen(true);
-    const closeModals = () => setModalOpen(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const openModals = () => setModalOpen(true);
+  const closeModals = () => setModalOpen(false);
 
   const [cakes, setCakes] = useState([]);
   const [openModal, setOpenModal] = useState(false);
@@ -31,17 +31,18 @@ const Cake = () => {
   function handleSubmit(e) {
     e.preventDefault();
     addCake(post)
-      .then(response => {
+      .then((response) => {
         console.log("Kue berhasil ditambahkan:", response);
-        setCakes(prevCakes => [...prevCakes, response]);  // Tambahkan kue baru ke state
-        console.log("State cakes setelah submit:", cakes);  // Pastikan state diperbarui
-        setOpenModal(false);  // Tutup modal
+        setCakes((prevCakes) => [...prevCakes, response]); // Tambahkan kue baru ke state
+        console.log("State cakes setelah submit:", cakes); // Pastikan state diperbarui
+        setOpenModal(false); // Tutup modal
       })
-      .catch(error => { 
+      .catch((error) => {
         console.error("Error adding cake:", error);
       });
+      
   }
-  
+
   // Fetch cakes from API
   const fetchCake = async () => {
     try {
@@ -74,7 +75,10 @@ const Cake = () => {
   return (
     <div className="columns mt-5 is-centered">
       <div className="column is-full p-10 flex flex-col">
-        <div className="w-32 border-2 text-center border-slate-500 p-3 rounded-md bg-yellow-600 text-white" onClick={handleOpenModal}>
+        <div
+          className="w-32 border-2 text-center border-slate-500 p-3 rounded-md bg-yellow-600 text-white"
+          onClick={handleOpenModal}
+        >
           Tambah Kue
         </div>
         {openModal && (
@@ -91,7 +95,11 @@ const Cake = () => {
               key={cake.id}
               className="border border-gray-300 rounded-lg shadow-lg overflow-hidden"
             >
-              <img className="w-full h-48 object-cover" src={cake.imageUrl} alt={cake.name} />
+              <img
+                className="w-full h-48 object-cover"
+                src={cake.imageUrl}
+                alt={cake.name}
+              />
               <div className="p-4">
                 <h3 className="text-lg font-semibold mb-2">{cake.name}</h3>
                 <p className="text-sm text-gray-600 mb-2">

@@ -10,3 +10,16 @@ Proyek ini merupakan aplikasi web yang dibangun menggunakan React JS di bagian f
 - Tailwind CSS untuk membuat tampilan yang modern dan responsif dengan utility-first CSS.
 - Nodemon untuk secara otomatis memonitor perubahan pada server dan menjalankan ulang server Express.
 
+# Preview
+
+- ### Halaman Login
+<img src="./src/image/login.png">
+
+- ### Halaman Home
+<img src="./src/image/Home.png">
+
+- ### Halaman Cake
+<img src="./src//image/Cake.png">
+
+- ### Form Add Cake
+<img src="./src/image/FormAddCake.png">
